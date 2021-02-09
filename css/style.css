@@ -36,7 +36,7 @@
 }
 
 .container__navbar {
-  background-color: #555;
+  background-color:  #112D32;
   position: relative;
   width: fit-content;
   border-radius: 10px 10px 0px 0px;
@@ -65,7 +65,7 @@
 }
 
 .active {
-  background-color: grey;
+  background-color:  #254E58;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -195,7 +195,7 @@
 
 .zoomButtons{
   position: absolute;
-  left: 280px;
+  left: 285px;
   top: 90px;
 }
 /* #zoomControler{
