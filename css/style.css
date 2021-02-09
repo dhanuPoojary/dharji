@@ -90,9 +90,9 @@
   background-color: gray;
   border: none;
   border-radius: 30px;
-  margin: 4px 4px 4px 0px;
-  width: 40px;
-  height: 40px;
+  margin: 3px 3px 3px 0px;
+  width: 35px;
+  height: 35px;
   color: rgb(7, 7, 7);
   transition: all ease-in-out 0.2s;
 }
@@ -117,8 +117,11 @@
 }
 
 .scrollButton {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
+  position: absolute;
+  top:460px;
+  left: 20px;
   overflow-x: auto;
 }
 
