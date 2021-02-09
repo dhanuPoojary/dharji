@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="Javascript/fabric.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__navbar">
+            <a href="index.html" class="tab"><i class="fa fa-scissors" aria-hidden="true"></i> Tailor</a>
+            <a href="userPage.html" class="active tab"><i class="fa fa-user" aria-hidden="true"></i> User</a>
+        </div>
+        <div class="content"> <canvas id="c" width="250" height="550">
+            </canvas>
+            <div class="container container__btn">
+                <div>
+                <button class="container__btn__edit " id="save " onclick='storeData()'><i class="fa fa-floppy-o"
+                        aria-hidden="true"></i></button>
+                <div id="saveMsg">Saved </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="Javascript/app.js"></script>
+</body>
+
+</html>

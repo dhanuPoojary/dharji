@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Javascript/fabric.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__navbar">
+            <a href="sample.html" class="active tab"> <i class="fa fa-scissors" aria-hidden="true"></i>
+                Tailor</a>
+            <a href="userPage.html" class="tab"><i class="fa fa-user" aria-hidden="true"></i> User</a>
+        </div>
+        <div class="content">
+            <a href="sample.html" id="backButton" class=" back--btn"><i class="fa fa-arrow-left"
+                    aria-hidden="true"></i></a>
+                <button class="container__btn__edit " id="leftButton" onclick="getData()" title="view mode"><i class="fa fa-eye"
+                        aria-hidden="true"></i></button>
+            <div id="canvas">
+                <canvas id="c" width="220" height="450"></canvas>
+            </div>
+            <div class="saveButton" id="rightButton">
+            <button id="button" onclick="addLine(this)" value="add" class="container__btn__edit" title="Add"><i
+                class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+        <button class="container__btn__edit" id="button " onclick='storeData()' title="Save"><i
+                class="fa fa-floppy-o" aria-hidden="true"></i></button>
+        <div id="saveMsg">Saved </div></div>
+
+            <!-- <div class="container container__btn" id="editButtons"> -->
+
+            <div class="scrollButton" id="scrollButton">
+                <button class="container__btn__edit" id="delete " onclick='deleteLine()' title="Delete"><i
+                        class="fa fa-trash" aria-hidden="true"></i></button>
+                <button class="container__btn__edit" id="redo " onclick='reset()' title="Reset"><i class="fa fa-refresh"
+                        aria-hidden="true"></i></button>
+                <button class=" container__btn__edit " id="undo " onclick='undo()' title="Undo"><i class="fa fa-undo"
+                        aria-hidden="true"></i></button>
+                <button class="container__btn__edit" id="redo " onclick='redo()' title="Redo"><i class="fa fa-repeat"
+                        aria-hidden="true"></i></button>
+                <button class="container__btn__edit" id="zoom-in" title="Zoom In"><i class="fa fa-search-plus"
+                        aria-hidden="true"></i></button>
+                <button class="container__btn__edit" id="zoom-out" title="Zoom Out"><i class="fa fa-search-minus"
+                        aria-hidden="true"></i></button>
+                <button class="container__btn__edit" id="zoomUp"><i class="fa fa-chevron-up"
+                        aria-hidden="true"></i></button>
+                <button id="zoomGoLeft" class="container__btn__edit"><i class="fa fa-chevron-left"
+                        aria-hidden="true"></i></button>
+                <button class="container__btn__edit container__btn__edit--reset" onclick="zoomReset()"><i
+                        class="fa fa-arrows" aria-hidden="true"></i></button>
+                <button id="zoomGoRight" class="container__btn__edit"><i class="fa fa-chevron-right"
+                        aria-hidden="true"></i></button>
+                <button class="container__btn__edit" id="zoomDown"><i class="fa fa-chevron-down"
+                        aria-hidden="true"></i></button>
+
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="Javascript/main.js"></script>
+</body>
+
+</html>
