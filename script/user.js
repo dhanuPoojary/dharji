@@ -1,7 +1,7 @@
 let text;
 let saveMsg=document.getElementById("saveMsg");
 
-let canvas = new fabric.Canvas('c');
+let canvas = new fabric.Canvas('canvas');
 
 if (localStorage.getItem("design") !== null) {
     const json = localStorage.getItem("design");

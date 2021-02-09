@@ -5,22 +5,19 @@ let backButton=document.getElementById("backButton");
 let rightButton=document.getElementById("rightButton");
 let leftButton=document.getElementById("leftButton");
 let saveMsg=document.getElementById("saveMsg");
-
 let showUPButtons=document.getElementById('zoomButtons');
 let zoomControlButton=document.getElementById('zoomControler')
 
-
-let canvas = new fabric.Canvas('c');
-
+let canvas = new fabric.Canvas('canvas');
 
 const setBackground = () => {
-    canvas.setBackgroundImage('./image//body.jpg', function () {
+    canvas.setBackgroundImage('./image//human.jpg', function () {
         canvas.renderAll();
     });
 }
 setBackground()
 
-const drawLine = () => {
+const handleDrawLine = () => {
     canvas.on('mouse:down', function (o) {
         isDown = true;
         let pointer = canvas.getPointer(o.e);
@@ -104,10 +101,10 @@ const redo = () => {
     }
 }
 const addLine = () => {
-    drawLine();
+    handleDrawLine();
 }
 
-const deleteLine = () => {
+const handleDeleteLine = () => {
     canvas.getActiveObjects().forEach((obj) => {
         canvas.remove(obj)
     });
@@ -167,7 +164,7 @@ const zoomReset=()=>{
 }
 
 
-const zoomFunction=()=>{
+const handleZoomFunction=()=>{
     if(showUPButtons.value==='off'){
         showUPButtons.style.display="none";
         showUPButtons.value="on"

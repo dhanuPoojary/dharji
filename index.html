@@ -25,7 +25,8 @@
 
       <a 
       href="userPage.html" 
-      class="tab">
+      class="tab"
+      >
         <i class="fa fa-user" aria-hidden="true"></i>
         User
       </a>
@@ -42,7 +43,7 @@
         <i class="fa fa-arrow-left" aria-hidden="true"></i>
       </a>
 
-      <canvas id="c" width="300" height="450"></canvas>
+      <canvas id="canvas" width="280" height="400"></canvas>
 
       <button 
       class="container__btn__edit " 
@@ -77,14 +78,7 @@
           <div id="saveMsg">Saved </div>
         </div>
 
-        <button 
-        class="container__btn__edit"
-        id="zoomControler" 
-        value="off"  
-        onclick="zoomFunction()"
-        >
-          <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-        </button>
+       
       </div>
 
       <div class="scrollButton" id="scrollButton">
@@ -92,7 +86,7 @@
         class="container__btn__edit" 
         id="delete " 
         title="Delete"
-        onclick="deleteLine()" 
+        onclick="handleDeleteLine()" 
         >
         <i class="fa fa-trash" aria-hidden="true"></i>
         </button>
@@ -128,7 +122,8 @@
         class="container__btn__edit" 
         id="zoom-in" 
         title="Zoom In"
-        ><i class="fa fa-search-plus" aria-hidden="true"></i>
+        >
+        <i class="fa fa-search-plus" aria-hidden="true"></i>
         </button>
 
         <button 
@@ -138,38 +133,46 @@
         >
         <i class="fa fa-search-minus" aria-hidden="true"></i>
         </button>
+        <button 
+        class="container__btn__edit"
+        id="zoomControler" 
+        value="off"  
+        onclick="handleZoomFunction()"
+        >
+          <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+        </button>
 
         <div id="zoomButtons" class="zoomButtons">
           <button 
-          class="container__btn__edit" 
+          class="zoomfeature__btn zoomfeature__btn--zoom" 
           id="zoomUp"
           >
           <i class="fa fa-chevron-up" aria-hidden="true"></i>
           </button>
-
+          <div>
           <button 
-          class="container__btn__edit"
+          class="zoomfeature__btn"
           id="zoomGoLeft" 
           >
           <i class="fa fa-chevron-left" aria-hidden="true"></i>
           </button>
 
           <button 
-          class="container__btn__edit" 
+          class="zoomfeature__btn" 
           onclick="zoomReset()"
           >
           <i class="fa fa-arrows" aria-hidden="true"></i>
           </button>
 
           <button 
-          class="container__btn__edit"
+          class="zoomfeature__btn"
           id="zoomGoRight" 
           >
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
           </button>
-
+        </div>
           <button 
-          class="container__btn__edit"
+          class="zoomfeature__btn zoomfeature__btn--zoom"
           id="zoomDown" 
           >
           <i class="fa fa-chevron-down" aria-hidden="true"></i>
