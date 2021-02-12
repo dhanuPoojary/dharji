@@ -34,16 +34,7 @@
     <div class="content"> 
       <canvas id="canvas" width="280" height="400"></canvas>
       <div class="container container__btn">
-        <div class="savebtn" id="rightButton">
-          <button 
-          class="container__btn__edit " 
-          id="save" 
-          onclick='storeData()'
-          >
-          <i class="fa fa-floppy-o"aria-hidden="true"></i>
-          </button>
-
-          <div id="saveMsg">Saved </div>
+        <div class="saveButton" id="rightButton">
           <button 
           class="container__btn__edit " 
           id="save" 
@@ -51,6 +42,18 @@
           >
           <i class="fa fa-text-width" aria-hidden="true"></i>
           </button>
+
+          <div>
+            <button 
+            class="container__btn__edit " 
+            id="save" 
+            onclick='storeData()'
+            >
+            <i class="fa fa-floppy-o"aria-hidden="true"></i>
+            </button>
+            <div id="saveMsg">Saved </div>
+
+          </div>
         </div>
       </div>
     </div>
