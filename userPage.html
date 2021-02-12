@@ -34,7 +34,7 @@
     <div class="content"> 
       <canvas id="canvas" width="280" height="400"></canvas>
       <div class="container container__btn">
-        <div class="savebtn">
+        <div class="savebtn" id="rightButton">
           <button 
           class="container__btn__edit " 
           id="save" 
@@ -44,6 +44,13 @@
           </button>
 
           <div id="saveMsg">Saved </div>
+          <button 
+          class="container__btn__edit " 
+          id="save" 
+          onclick='addText()'
+          >
+          <i class="fa fa-text-width" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
     </div>

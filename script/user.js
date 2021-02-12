@@ -1,4 +1,4 @@
-let text;
+let text,isWrite;
 let saveMsg=document.getElementById("saveMsg");
 
 let canvas = new fabric.Canvas('canvas');
@@ -10,14 +10,17 @@ if (localStorage.getItem("design") !== null) {
     });
 }
 
+function addText(){
 canvas.on('mouse:down', function(e) {
+    isWrite = true;
     if (e && e.target && e.target.left && e.target.top) {
+        
         text = new fabric.Textbox('', {
             left: e.target.left,
             top: e.target.top,
             fontSize: 20,
             editable: true,
-            // Selection: false,
+            selection: false,
             fill: 'black',
             width: 30,
             height: 40,
@@ -25,14 +28,29 @@ canvas.on('mouse:down', function(e) {
             hasControls: false,
             hasBorders: true,
             backgroundColor: 'yellow',
+            lockMovementX: true,
+            lockMovementY: true,
+            lockRotation: true,            
         });    
-        canvas.add(text)
+        canvas.add(text);
         text.enterEditing();
-        canvas.setActiveObject(text);
-        canvas.renderAll();
-    }
-});
 
+        
+        // text.enterEditing();
+        // canvas.setActiveObject(text);
+        // // canvas.renderAll(); 
+
+        // document.getElementById('input').addEventListener('keyup', function() {
+        //     text.text = document.getElementById('input').value;
+        //     canvas.renderAll();
+        // });
+          
+    }
+    canvas.on('mouse:up', function (o) {
+        canvas.off('mouse:down');
+    });
+});
+}
 const storeData = () => {
     const json = canvas.toJSON();
     localStorage.setItem('measurement', JSON.stringify(json));

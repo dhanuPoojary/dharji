@@ -169,12 +169,6 @@
 .zoomfeature__btn--zoom{
   margin: 2px 0px 0px 36px;
 }
-.savebtn{
-  position: absolute;
-  left: 250px;
-  top: 50px;
-}
-
 #rightButton{
   position: absolute;
   left: 200px;
